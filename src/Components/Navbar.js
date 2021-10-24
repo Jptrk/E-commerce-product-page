@@ -23,14 +23,16 @@ const Navbar = () => {
           onClick={() => setShow((prev) => !prev)}
         />
         <img src={Logo} alt="logo" className="logo" />
-        <ul className={show ? "show" : ""}>
-          <img
-            src={Close}
-            alt={Close}
-            className="close"
-            onClick={() => setShow((prev) => !prev)}
-          />
 
+        <ul className={show ? "show" : ""}>
+          <li>
+            <img
+              src={Close}
+              alt={Close}
+              className="close"
+              onClick={() => setShow((prev) => !prev)}
+            />
+          </li>
           <li>Collections</li>
           <li>Men</li>
           <li>Women</li>
@@ -138,6 +140,14 @@ const Links = styled.div`
       &:hover {
         &::after {
           width: 100%;
+        }
+      }
+    }
+
+    li:nth-of-type(1) {
+      &:hover {
+        &::after {
+          width: 0%;
         }
       }
     }
