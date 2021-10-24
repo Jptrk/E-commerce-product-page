@@ -151,17 +151,6 @@ const Product = () => {
             </div>
           </Buttons>
         </Details>
-        <div class="attribution">
-          Challenge by&nbsp;
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-            Frontend Mentor
-          </a>
-          . Coded by{" "}
-          <a href="https://github.com/Jptrk/" target="_blank">
-            Jptrk
-          </a>
-          .
-        </div>
       </Body>
     </>
   );
@@ -174,17 +163,6 @@ const Body = styled.div`
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-
-  .attribution {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
 
   img {
     cursor: pointer;
