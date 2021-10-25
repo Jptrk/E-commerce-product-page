@@ -46,6 +46,7 @@ const Navbar = () => {
       </Links>
       <Profile>
         <div className="cart">
+          <div className="item-count">1</div>
           <img
             src={Cart}
             alt={Cart}
@@ -219,9 +220,19 @@ const Profile = styled.div`
     img {
       cursor: pointer;
       transition: 200ms ease;
-      &:hover {
-        transform: scale(1.1);
-      }
+      z-index: 1;
+    }
+
+    .item-count {
+      background-color: hsl(26, 100%, 55%);
+      font-size: 9px;
+      width: 18px;
+      font-weight: bold;
+      border-radius: 9px;
+      color: white;
+      text-align: center;
+      transform: translate(10px, 8px);
+      z-index: 2;
     }
   }
 
