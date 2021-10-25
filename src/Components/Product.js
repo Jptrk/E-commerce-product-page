@@ -5,6 +5,8 @@ import minus from "../Images/icon-minus.svg";
 import plus from "../Images/icon-plus.svg";
 import prev from "../Images/icon-previous.svg";
 import next from "../Images/icon-next.svg";
+import cart from "../Images/icon-cart-white.svg";
+
 //Library
 import styled from "styled-components";
 import { useEffect, useRef, useState } from "react";
@@ -147,7 +149,9 @@ const Product = () => {
               </div>
             </div>
             <div className="add-to-cart">
-              <button>Add to cart</button>
+              <button>
+                <img src={cart} alt={cart} /> Add to cart
+              </button>
             </div>
           </Buttons>
         </Details>
@@ -381,10 +385,18 @@ const Buttons = styled.div`
   .add-to-cart {
     button {
       height: 55px;
-      width: 230px;
+      width: 250px;
       background-color: hsl(26, 100%, 55%);
       border: none;
       border-radius: 10px;
+
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      img {
+        margin-right: 10px;
+      }
 
       color: white;
       font-weight: 700;
